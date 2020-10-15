@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <script src='./dist/index.js'></script>
+  <style>
+    canvas {
+      width: 100%;
+      height: 100%
+    }
+
+    body {
+      margin: 0
+    }
+  </style>
+</head>
+
+<body>
+  <canvas></canvas>
+</body>
+<script>
+  window.onload = function () {
+    Marching.export(window)
+    Marching.init(document.querySelector('canvas'))
+
+    let thing = Marching.Box().material('normal').rotate(50, 1, 1, 1)
+    const s = march(thing).render(3, true)
+
+
+    const animate = function (time) {
+      thing.rotate((time / 60), 0, 1, 1)
+
+      requestAnimationFrame(animate)
+    }
+
+    animate()
+
+    // Marching.callbacks.push(time => thing.rotate(Math.sin(time) * 180, 1, 0, 1))
+
+    window.onresize = function () {
+      s.resolution(.5)
+    }
+  }
+</script>
+
+</html>
