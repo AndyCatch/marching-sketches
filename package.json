@@ -1,0 +1,22 @@
+{
+  "name": "marching-sketches",
+  "version": "1.0.0",
+  "description": "Creating a place to store experiments + explorations with the MarchingJS platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyCatch/marching-sketches.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndyCatch/marching-sketches/issues"
+  },
+  "homepage": "https://github.com/AndyCatch/marching-sketches#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

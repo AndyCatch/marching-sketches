@@ -33,4 +33,5 @@ march(object)
 onframe = (t) =>
 {
   object.rotate(t * 10, -1, 0, 1)
+  // object.scale(sin(t))
 }

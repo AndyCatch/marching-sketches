@@ -1,7 +1,8 @@
 rpt = Repeat(
-  Sphere(.14),
-  Vec3(0.25)
-)
+    Sphere(.14),
+    Vec3(0.25)
+  )
+  .material('normal')
 
 march(
     int = Intersection(

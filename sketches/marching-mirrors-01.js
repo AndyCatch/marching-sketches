@@ -36,7 +36,7 @@ march(RoundUnion(m, Plane(Vec3(0, 0, 1)), 0.125)
   .render(quality, true)
   .camera(0, 0, cameraz)
 
-// rotate each reflection (on cpu)
+// rotate each reflection (on cpu)≥
 // rotate the sum of reflections, stored in
 // the variable m, on the y axis
 onframe = (t) =>
