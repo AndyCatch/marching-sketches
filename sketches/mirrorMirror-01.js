@@ -1,7 +1,7 @@
 // From the examples in the Marching reference / Gists
 m = Mirror(
     Mirror(
-      Mirror(TriPrism(3)
+      Mirror(TriPrism(5)
         .material('noise')
         .scale(0.5)
         .translate(0.5, 0.25, 0.5))
@@ -17,7 +17,7 @@ m = Mirror(
 
 march(m)
   .fog(0.15, Vec3(0, 1, 0.5))
-  .post(Bloom(0.5, 0.01))
+  .post(Bloom(0.5, 0.01), Focus(.15, .001))
   .render("high")
 
 onframe = (t) =>

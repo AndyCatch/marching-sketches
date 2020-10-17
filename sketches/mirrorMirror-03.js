@@ -14,12 +14,13 @@ m = Mirror(
   .scale(0.75)
   .rotate(270, 1, 0, 0)
 
-rpt = Repeat(m, Vec3(1, 1, 0))
+rpt = Twist(m, Vec3(1, 1, 0))
   .scale(0.75)
 
 march(rpt)
   .fog(0.15, Vec3(0, 1, 0.5))
   .render("high")
+
 
 onframe = (t) =>
 {
