@@ -3,7 +3,7 @@
 
 quality = 'low'
 size = .01 / 4
-m = HexPrism(Vec2(size, size / 16))
+m = TriPrism(Vec2(size, size / 16))
   .material('green')
 mirrors = []
 count = 19
@@ -32,10 +32,10 @@ onframe = () =>
     {
       v.scale(1 + count / 100)
       v.translate(max(.0035, pow(phase, i * i)), max(.0035, pow(phase, i * i)), phase)
-      v.rotate(90 + sin(Math.PI * time) * 135, pow(t, pow(i, i)), pow(t, cos(t % .125 * time)), tan(t, t / i))
+      v.rotate(90 + sin((Math.PI / 4) * time) * 135, pow(t, pow(i, i)), pow(t, cos(t % .125 * time)), tan(t, t / i))
     }
   })
-  time += .001
+  time += .005
 }
 
 Marching.useProxies = true

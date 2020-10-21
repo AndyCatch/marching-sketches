@@ -17,15 +17,20 @@ m = Mirror(
 rpt = Twist(m, Vec3(1, 1, 0))
   .scale(0.75)
 
-march(rpt)
+thing = PolarRepeat(
+  rpt, 2, 1
+)
+
+march(thing)
+  // .background(Vec3(0.087, 0.137, 0.560)) // blue?
   .fog(0.15, Vec3(0, 1, 0.5))
   .render("high")
 
-
 onframe = (t) =>
 {
+  thing.rotate(t * 10, 1, 1, 0)
   rpt.rotate(t * 20, 1, 0, 1)
-  m.move(Math.sin(t), null, 0)
+  m.move(sin(t), null, 0)
   m.rotate(t * 20, 0, 1, 1)
 }
 

@@ -1,12 +1,13 @@
 // Doesn't really work? Getting null object errors (maybe because vignette is deprecated)
 
-quality = 'med' // try 'high' if you have a nice gfx card
+quality = 'low' // try 'high' if you have a nice gfx card
 size = .025 / 0.125
-count = 25
+count = 19
 box = Box(size)
   .material('white')
 mrrr = Mirror(box)
-  .translate(size, size, size)
+  // .translate(size, size, size)
+  .scale(0.5)
 mirrors = [mrrr]
 
 for (let i = 0; i < count; i++)
@@ -21,7 +22,7 @@ march(mrrr)
   .fog(.85, Vec3(0))
   // .vignette(.05)
   .render('fractal.' + quality)
-  .camera(0, 0, 1.9, .25)
+  .camera(0, 0, 1.9, 100)
 
 t = 92.5
 onframe = () =>
