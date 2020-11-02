@@ -9,7 +9,7 @@ stair = StairsUnion(
   )
   .material('normal')
 box = Box(1.5)
-  .material('normal')
+// .material('normal')
 bend = Twist(stair, Vec2(1.01, 2))
   .scale(1.5)
 onion = Onion(bend, 0.5)

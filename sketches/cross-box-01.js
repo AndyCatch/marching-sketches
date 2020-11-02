@@ -29,14 +29,13 @@ cross = Union2(
 // Subtract the cross geometry from the rounded box
 object = Difference(roundedSphere, cross)
 march(object)
-  .post(h = Hue())
+  // .post(h = Hue())
   .background(Vec3(0.087, 0.137, 0.560)) // blue?
-  .render('high')
+  .render(5, true)
+  .camera(0, 0, 3)
 
 onframe = (t) =>
 {
-  object.rotate(t * 10, -1, 0, 1)
-  h.shift = sin(t / 5)
-  b.amount = sin(t * 0.25)
-  // object.scale(sin(t))
+  object.rotate(t * 30, -1, 0, 1)
+  // h.shift = sin(t / 5)
 }

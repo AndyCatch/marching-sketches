@@ -3,7 +3,7 @@
 stair = StairsUnion(
     Sphere(1.5),
     Repeat(
-      Sphere(2), 7
+      Sphere(0.5), 7
     ),
     5
   )
@@ -19,7 +19,7 @@ rpt = PolarRepeat(onion, 3.0, 1)
 march(
     rpt
   )
-  .post(Brightness(-0.3), Focus(.15, .001))
+  // .post(Brightness(0.1), Focus(.15, .001))
   .background(Vec3(0, 0, .001))
   // .gif(600, 600, 20)
   .render('high')

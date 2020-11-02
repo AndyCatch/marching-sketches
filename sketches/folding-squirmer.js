@@ -2,11 +2,11 @@
 
 quality = 'low' // try 'high' if you have a nice gfx card
 size = .025 / 0.125
-count = 19
+count = 18
 box = Box(size)
-  .material('white')
+  .material('normal')
 mrrr = Mirror(box)
-  // .translate(size, size, size)
+  .translate(size, size, size)
   .scale(0.5)
 mirrors = [mrrr]
 
@@ -19,10 +19,10 @@ for (let i = 0; i < count; i++)
 }
 
 march(mrrr)
-  .fog(.85, Vec3(0))
+  // .fog(.85, Vec3(0))
   // .vignette(.05)
-  .render('fractal.' + quality)
-  .camera(0, 0, 1.9, 100)
+  .render(3, true)
+  .camera(0, 0, 29)
 
 t = 92.5
 onframe = () =>

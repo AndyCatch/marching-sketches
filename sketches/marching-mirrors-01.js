@@ -31,7 +31,8 @@ for (let i = 1; i < count; i++)
 
 // render reflections over a plane
 march(RoundUnion(m, Plane(Vec3(0, 0, 1)), 0.125)
-    .material("normal"))
+    .material("normal")
+    .scale(0.5))
   .fog(0.15, Vec3(0.5, 0.5, 0.5))
   .render(quality, true)
   .camera(0, 0, cameraz)
@@ -51,5 +52,5 @@ onframe = (t) =>
     null,
     Math.cos(t) * 0.00125
   )
-  m.rotate(t * 5, 0, 1, 1)
+  m.rotate(t * 5, 1, 1, 0)
 };

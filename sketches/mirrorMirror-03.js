@@ -28,7 +28,7 @@ march(thing)
 
 onframe = (t) =>
 {
-  thing.rotate(t * 10, 1, 1, 0)
+  thing.rotate(t * 10, 0, 1, 0)
   rpt.rotate(t * 20, 1, 0, 1)
   m.move(sin(t), null, 0)
   m.rotate(t * 20, 0, 1, 1)

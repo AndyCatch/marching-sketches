@@ -19,15 +19,15 @@ march(cham)
   .background(v3(0))
   .fog(0.25, v3(0))
   .render(3, true)
-  .camera(0, 0, 3.0)
+  .camera(0, 0, 1.85)
 
 onframe = (t) =>
 {
-  // cham.move(
-  //   Math.sin((Math.PI * 2) * t) * 0.125,
-  //   null,
-  //   Math.sin(t) * 0.4
-  // )
+  cham.move(
+    Math.sin((Math.PI / 4) * t),
+    null,
+    Math.sin(t)
+  )
   repeatObj.rotate(cos(((Math.PI / 10) * t)) * 85, 1, 1, 0)
   // repeatObj.scale(sin(t * 0.125))
 }
