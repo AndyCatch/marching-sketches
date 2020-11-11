@@ -1,10 +1,10 @@
-// From the examples in the Marching reference / Gists
+// From the examples in the Marching ref
 m = Mirror(
     Mirror(
       Mirror(TriPrism(5)
         .material('noise')
         .scale(0.5)
-        .translate(0.5, 0.25, 0.5))
+        .translate(0.5, 0.125, 0.5))
       .rotate(45, 1, 0.5, 0.25)
       .translate(0.5, 0.5, 0.5)
     )
@@ -16,9 +16,10 @@ m = Mirror(
 // .gui()
 
 march(m)
-  .fog(0.15, Vec3(0, 1, 0.5))
-  .post(Bloom(0.5, 0.01), Focus(.15, .001))
+  .background(Vec3(0.087, 0.137, 0.560)) // blue?
+  .post(Focus(.15, .001))
   .render("high")
+  .camera(0, 0, 6)
 
 onframe = (t) =>
 {
@@ -29,5 +30,3 @@ onframe = (t) =>
   )
   m.rotate(t * 20, 1, 1, 1)
 }
-
-Marching.useProxies = true
