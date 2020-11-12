@@ -26,10 +26,13 @@ march(diff)
   .render(3, true)
   .camera(0, 0, 2)
 
+// FFT.start() // works only in Playground
 onframe = (t) =>
 {
   diff.rotate(t * 20, t * -10, t * 5)
-  diff.translate(sin(t * 0.125), 0, cos(t * -0.125))
+  diff.translate(sin(t * 0.125), 0, cos(t * -0 .125))
   int.rotate(t * 4, 1, -1, 1)
+//   rpt.distance.x = FFT.low // works only in Playground
+  rpt.distance.y = sin(t * .095)
   rpt.scale(sin(t * .095))
 }
