@@ -3,7 +3,7 @@ rpt = Repeat(
     TriPrism(.15),
     Vec3(0.25)
   )
-  .material('noise')
+  .material(mat)
 
 int = Intersection(
   rpt,
@@ -13,7 +13,7 @@ int = Intersection(
 
 diff = StairsDifference(int, Sphere(1.5)
   .translate(1.5, 0, 1.5)
-  .material('black')
+  .material(mat)
 )
 
 march(diff)
@@ -24,7 +24,7 @@ march(diff)
     Light(Vec3(0, 0, -3), Vec3(0, 0, 1)),
   )
   .render(3, true)
-  .camera(0, 0, 2)
+  .camera(0, 0, 6)
 
 onframe = (t) =>
 {

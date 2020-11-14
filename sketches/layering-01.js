@@ -22,6 +22,7 @@ march(
 onframe = (t) =>
 {
   bend.rotate(t * 10, 1, 1, sin(t * 0.25))
+  bend.amount = Vec2(sin(t * 0.125))
   // onion.rotate(t * 25, 1, 0, 1)
   rpt.rotate(t * 10, -1, 0, 1)
 }

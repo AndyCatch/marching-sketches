@@ -47,10 +47,10 @@ onframe = (t) =>
     // angle (in degrees) then axes
     v.rotate(sin(((Math.PI / 8) * t) / 2) * 85, i, i / 2, i / 3)
   })
-  m.translate(
-    Math.sin(t),
-    null,
-    Math.cos(t) * 0.00125
-  )
+  // m.translate(
+  //   sin(t) * 0.00125,
+  //   null,
+  //   cos(t) * 0.00125
+  // )
   m.rotate(t * 5, 1, 1, 0)
 };
